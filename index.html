@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Calculadora de Viagem">
+    <meta name="keywords" content="viagem, calculadora, combustível, HTML, CSS">
+    <meta name="author" content="Seu Nome">
+
+    <title>Calculadora de Viagem</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Calculadora de Viagem</h1>
+
+        <form id="tripForm">
+            <label for="tripName">Nome da Viagem:</label>
+            <input type="text" id="tripName" required>
+
+            <label for="distance">Distância percorrida (km):</label>
+            <input type="number" id="distance" required>
+
+            <label for="fuelUsed">Litros de combustível gastos:</label>
+            <input type="number" id="fuelUsed" required>
+
+            <label for="fuelPrice">Valor do litro de combustível (R$):</label>
+            <input type="number" id="fuelPrice" step="0.01" required>
+
+            <button type="button" onclick="calculateTrip()">Calcular</button>
+        </form>
+
+        <div id="result" class="hidden">
+            <h2>Resultados</h2>
+            <p>Autonomia: <span id="autonomy"></span> km/litro</p>
+            <p>Valor da Viagem: R$ <span id="tripCost"></span></p>
+            <p>Valor por Quilômetro: R$ <span id="costPerKm"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
